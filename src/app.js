@@ -2,6 +2,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import adminRegisterRoute from "./routes/authAdminRoute.js";
 import cors from "cors"
+import customerRegisterRoute from "./routes/customerRoute.js";
 
 
 const app = express()
@@ -15,5 +16,6 @@ app.use(cors({
 app.use(cookieParser())
 
 app.use("/api/admin", adminRegisterRoute)
+app.use("/api/customer", customerRegisterRoute)
 
 export default app;
